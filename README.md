@@ -1,6 +1,9 @@
 # RealEstateAngularMiniProject
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8. It is user-friendly web application developed using Angular, designed to simplify the process of buying and renting properties. The application features a responsive UI with advanced search and filter options for users to browse listings based on location, price, property type, and amenities. 
+
+<img width="1435" alt="image" src="https://github.com/user-attachments/assets/a54895c5-f4d8-4afd-bd36-dc6fc2262d1b" />
+
 
 ## Development server
 
