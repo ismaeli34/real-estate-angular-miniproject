@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { PropertyListComponent } from './pages/property-list/property-list.component';
+import { CreatePropertyComponent } from './pages/create-property/create-property.component';
 
 export const routes: Routes = [
     {
@@ -26,5 +27,9 @@ export const routes: Routes = [
     {
         path:'property-list',
         component: PropertyListComponent
+    },
+    {
+        path: 'create-property',
+        component:CreatePropertyComponent
     }
 ];
