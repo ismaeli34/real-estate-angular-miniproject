@@ -17,288 +17,43 @@
                 <div class="property-slider-wrap">
                     <div class="property-slider">
                         <div class="row">
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                            <img src="https://themewagon.github.io/property/images/img_1.jpg" alt="Image" class="img-fluid" />
-                                    </a>
+                            @for(item of propertyList; track $index){
 
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
+                                <div class="col-3">
+                                    <div class="property-item">
+                                        <a class="img">
+                                                <img [src]="item.thumbnailImage" alt="Image" class="img-fluid" />
+                                        </a>
+    
+                                        <div class="property-content">
+                                            <div class="price mb-2"><span>${{item.price}}</span></div>
+                                            <div>
+                                                <span class="d-block mb-2 text-black-50"> {{item.address}}</span>
+                                                <span class="city d-block mb-3">{{item.city}},{{item.state}}</span>
+    
+                                                <div class="specs d-flex mb-4">
+                                                    <span class="d-block d-flex align-items-center me-3">
+                                                        <span class="icon-bed me-2"></span>
+                                                        <span class="caption">{{item.propertyType}}</span>
+                                                    </span>
+                                                    <span class="d-block d-flex align-items-center">
+                                                        <span class="icon-bath me-2"></span>
+                                                        <span class="caption">2 baths</span>
+                                                    </span>
+                                                </div>
+    
+                                                <a type="button" class="btn btn-primary" data-bs-toggle="modal" 
+                                                data-bs-target="#myModal" class="btn btn-primary py-2 px-3" (click)="openEnquiryModel(item.propertyId)">Make an
+                                                    Enquiry</a>
                                             </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            }
+                           
 
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_2.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_3.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_4.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_5.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_6.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_7.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_8.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .item -->
-                            <div class="col-3">
-                                <div class="property-item">
-                                    <a href="property-single.html" class="img">
-                                        <img src="https://themewagon.github.io/property/images/img_1.jpg" alt="Image" class="img-fluid" />
-                                    </a>
-
-                                    <div class="property-content">
-                                        <div class="price mb-2"><span>$1,291,000</span></div>
-                                        <div>
-                                            <span class="d-block mb-2 text-black-50">5232 California Fake, Ave.
-                                                21BC</span>
-                                            <span class="city d-block mb-3">California, USA</span>
-
-                                            <div class="specs d-flex mb-4">
-                                                <span class="d-block d-flex align-items-center me-3">
-                                                    <span class="icon-bed me-2"></span>
-                                                    <span class="caption">2 beds</span>
-                                                </span>
-                                                <span class="d-block d-flex align-items-center">
-                                                    <span class="icon-bath me-2"></span>
-                                                    <span class="caption">2 baths</span>
-                                                </span>
-                                            </div>
-
-                                            <a href="property-single.html" class="btn btn-primary py-2 px-3">Make an
-                                                Enquiry</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <!-- .item -->
                     </div>
 
 
@@ -307,3 +62,32 @@
         </div>
     </div>
 </div> 
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Make an enquiry</h4>
+          <button type="button" class="btn-close" (click)="closeEnquiryModel()" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <textarea [(ngModel)]="enquiryObj.enquiryMessage" name="" placeholder="Add Your Message" id=""></textarea>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeEnquiryModel()">Close</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="makeEnquiry()">Make an enquiry</button>
+
+        </div>
+  
+      </div>
+    </div>
+  </div>

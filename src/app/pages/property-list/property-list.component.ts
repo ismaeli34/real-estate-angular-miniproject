@@ -100,9 +100,7 @@ export class PropertyListComponent implements OnInit{
 
     }
   }
-
-
-
+  
   updateProperty(){
     this.masterService.updateProperty(this.propertyObj).subscribe((res:any)=>{
       if(res.result){

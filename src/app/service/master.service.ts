@@ -37,7 +37,10 @@ export class MasterService {
 
   deleteProperty(id:number){
     return this.http.delete(`${this.apiUrl}DeletePropertyId?propertyId=${id}`)
+  }
 
+  makeEnquiry(obj:any){
+    return this.http.post(`${this.apiUrl}AddNewEnquiry`,obj)
   }
 
 
